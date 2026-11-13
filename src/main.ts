@@ -4,7 +4,7 @@
 
 // STEG 1 ------------------------------------------------------------
 // TODO: skriv ut texten "Hej från Kafé Kardemumma" med console.log
-
+console.log("Hej från Kafé Kardemumma");
 
 // STEG 2 ------------------------------------------------------------
 // TODO: skapa konstanten kafeNamn (string) med värdet "Kafé Kardemumma"
@@ -12,14 +12,23 @@
 // TODO: skapa variablerna antalBullar (2) och antalKaffe (1) med let, båda number
 // TODO: skriv ut kafeNamn
 //       Skriv typen själv, till exempel:  const kafeNamn: string = "..."
-
+const kafeNamn: string = "Kafé Kardemumma";
+const prisKaffe: number = 35;
+let antalBullar: number = 2;
+let antalKaffe: number = 1;
+console.log(kafeNamn);
 
 // STEG 3 ------------------------------------------------------------
 // TODO: skapa en string, ett number, en boolean, en undefined och en null
 //       Typerna heter string, number, boolean, undefined och null
 // TODO: skriv ut typeof för alla fem på en rad (tips: separera med komma)
 // TODO: prova att ge number-variabeln en text. Vad säger TypeScript?
-
+const namn: string = "Joseph"
+let alder: number = 34;
+const sanningen: boolean = true;
+let vetEj: undefined;
+let noll: null;
+console.log(typeof namn, typeof alder, typeof sanningen, typeof vetEj, typeof noll);
 
 // STEG 4 ------------------------------------------------------------
 // TODO: räkna ut summa = antalBullar * prisBulle + antalKaffe * prisKaffe

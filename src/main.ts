@@ -13,7 +13,8 @@ console.log("Hej från Kafé Kardemumma");
 // TODO: skriv ut kafeNamn
 //       Skriv typen själv, till exempel:  const kafeNamn: string = "..."
 const kafeNamn: string = "Kafé Kardemumma";
-const prisKaffe: number = 35;
+const prisBulle: number = 35;
+const prisKaffe: number = 32;
 let antalBullar: number = 2;
 let antalKaffe: number = 1;
 console.log(kafeNamn);
@@ -28,7 +29,7 @@ let alder: number = 34;
 const sanningen: boolean = true;
 let vetEj: undefined;
 let noll: null;
-console.log(typeof namn, typeof alder, typeof sanningen, typeof vetEj, typeof noll);
+console.log(typeof namn, typeof alder, typeof sanningen, typeof vetEj, typeof noll)
 
 // STEG 4 ------------------------------------------------------------
 // TODO: räkna ut summa = antalBullar * prisBulle + antalKaffe * prisKaffe
@@ -36,18 +37,35 @@ console.log(typeof namn, typeof alder, typeof sanningen, typeof vetEj, typeof no
 // TODO: skriv ut "Summa: ... kr" och "Varav moms (12 %): ... kr"
 //       Moms ska ha två decimaler (toFixed(2))
 //       Håll musen över momsDel.toFixed(2). Vilken typ ger toFixed?
-
+let summa = antalBullar * prisBulle + antalKaffe * prisKaffe
+let momsDel = summa * 0.12 / 1.12
+console.log(`Summan är ${summa}kr med ${momsDel.toFixed(2)}kr moms`)
 
 // STEG 5 ------------------------------------------------------------
 // TODO: skapa ärStudent (boolean, true). Om ärStudent är true: rabatt 10 %.
 // TODO: räkna ut attBetala (number) och skriv ut "Att betala: ... kr"
-
+const arStudent: boolean = true;
+if (arStudent === true) {
+  summa = summa * 0.9;
+};
+console.log(`Att betala: ${summa}kr`);
 
 // STEG 6 ------------------------------------------------------------
 // TODO: skapa veckodag (string, "lördag") och klockslag (number, 15)
 // TODO: avgör om kaféet är öppet (boolean): vardagar 7–18, helger 9–16
 // TODO: skriv ut "Öppet just nu: ja" eller "Öppet just nu: nej"
-
+let veckodag: string = "måndag";
+let klockslag: number = 17;
+let oppet: boolean = true;
+if (veckodag === "lördag" || veckodag === "söndag" ) {
+  if (klockslag < 9 || klockslag > 16 ) {
+    oppet = false;
+  }
+}
+else if (klockslag < 7 || klockslag > 18) {
+  oppet = false;
+}
+console.log(`Öppet just nu: ${oppet ? "ja" : "nej"}`);
 
 // STEG 7 ------------------------------------------------------------
 // TODO: se README. Gissa först, kör sedan.
